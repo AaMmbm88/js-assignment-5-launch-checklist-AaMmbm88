@@ -1,8 +1,8 @@
-// Write your helper functions here!
+
 require('isomorphic-fetch');
 
 function addDestinationInfo(destination) {
-   // Here is the HTML formatting for our mission target div.
+
    let missionTargetDiv = document.getElementById("missionTarget");
    missionTargetDiv.innerHTML = `
                <h2>Mission Destination</h2>
@@ -17,18 +17,6 @@ function addDestinationInfo(destination) {
                ` 
 };
 
-   /*
-                <h2>Mission Destination</h2>
-                <ol>
-                    <li>Name: </li>
-                    <li>Diameter: </li>
-                    <li>Star: ${star}</li>
-                    <li>Distance from Earth: </li>
-                    <li>Number of Moons: </li>
-                </ol>
-                <img src="">
-   */
-// }
 
 function validateInput(testInput) {
 
@@ -39,26 +27,7 @@ function validateInput(testInput) {
                 }else{
                     return "Not a Number";
                 };    
-}
-//    let launchForm = document.getElementById("launchForm");
-//    launchForm.addEventListener("submit", function(event){
-    // let pilotName = document.querySelector("input[name=pilotName");
-    // let copilotName = document.querySelector("input[name=copilotName");
-    // let fuelLevel = document.querySelector("input[name=fuelLevel");
-    // let cargoMass = document.querySelector("input[name=cargoMass");
-    // let formInputArray = [pilotName, copilotName, fuelLevel, cargoMass]
-    // for (let i=0; i<formInputArray.length; i++){
-//         if (testInput === ""){
-//             alert("All fields are required!");
-//             event.preventDefault();
-//             return "Empty"
-//         }else if (!isNaN(parseInt(testInput))){
-//             return "Is a Number";
-//         }else{
-//             return "Not a Number";
-//         };    
-//    });
-// };
+};
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     
@@ -107,26 +76,14 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoMass) {
     };
 };
 
-// async function myFetch() {
-//     let planetsReturned;
-
-//     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
-//         console.log(response.json())
-
-//         });
-
-//     return planetsReturned = response.json();
-// }
-
-// function pickPlanet(planets) {
-// }
 
 async function myFetch() {
     let json = [];
-    let planets = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
-        json = response.json
+    let planets  
+    planets = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
+        json = response.json();
         });
-    return json
+    return json;
 };
 
 function pickPlanet(planets) {
